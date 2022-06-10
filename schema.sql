@@ -3,11 +3,15 @@
 
 
 CREATE TABLE animals (
-    id INT PRIMARY KEY,
-    name varchar,
+    id BIGSERIAL NOT NULL,
+    name VARCHAR,
     date_of_birth DATE,
     escape_attempts INT,
     neutered BOOLEAN,
-    weight_kg DECIMAL
-
+    weight_kg DECIMAL,
+    species VARCHAR,
+    PRIMARY KEY(id)
+   
 );
+  ALTER TABLE animals
+ADD COLUMN species VARCHAR;
