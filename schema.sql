@@ -34,4 +34,5 @@ ALTER TABLE animals DROP COLUMN species;
 
 /* Add species_id in animals table referenced from species table */
 ALTER TABLE animals
-ADD COLUMN species_id INT REFERENCES species (owner_id);
+ADD COLUMN species_id INT REFERENCES species (id);
+ADD COLUMN owner_id INT REFERENCES species (id);
